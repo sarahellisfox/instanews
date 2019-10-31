@@ -1,3 +1,17 @@
+// CSS BOX RESET CODE 
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  } 
+
+// Smooth Scrolling 
+
+html {
+    scroll-behavior: smooth; 
+}
+
 // Site Colours 
 $white-color: #FFFFFF;
 $gray-color: #c2c2c2; 
@@ -15,9 +29,10 @@ overflow: hidden;
 // Page Style 
 
 body {
-background-color: $black-color;
-font-size: 16px;
-color: $white-color; 
+    background-color: $black-color;
+    font-size: 16px;
+    color: $white-color; 
+    margin: 0;
 
 .site-wrapper, .navigation-container {
     display: flex;
@@ -29,33 +44,49 @@ color: $white-color;
 }
 
 .main-container {
-min-height: 91vh;
+    min-height: 91vh;
 }
 
 // Header Section
 
 .header-container {
-padding-top: 9.1rem;
+    padding-top: 9.1rem;
 }
 
 // Navigation Section
 
 .choose-text {
-font-size: 0.8rem;
-font-weight: 300; 
-padding-top: 1rem;
+    font-size: 0.8rem;
+    font-weight: 300; 
+    padding-top: 1rem;
 }
 
 #section-selector {
-color: $white-color; 
+    color: $white-color; 
 }
 
 // Articles Section
 
-.generated-articles img {
-width: 100%;   
+.generated-articles-container {
+    @extend .site-wrapper; 
+
+    
 }
 
+.generated-articles {
+    height: 450px;
+    background-position: center; 
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .article-caption {
+        background: rgba(0, 0, 0, 0.5);
+        line-height: 1.3em;
+        font-size: 1.1em;
+        padding: 0 1em;
+        text-align: justify;            
+    }
+}
 // Footer Section
 
 .footer-container {
