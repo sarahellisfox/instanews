@@ -24,10 +24,12 @@ html {
 
 body {
   background-color: #000000;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: #FFFFFF;
   margin: 0; }
-  body .site-wrapper, body .generated-articles-container, body .navigation-container {
+  body .site-wrapper, body .navigation-container {
+    width: 100%;
     display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
@@ -51,17 +53,25 @@ body {
 #section-selector {
   color: #FFFFFF; }
 
+.generated-articles-container {
+  display: block; }
+
 .generated-articles {
-  height: 450px;
-  background-position: center;
+  display: -webkit-box;
+  display: flex;
+  height: 425px;
+  width: 100%;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat; }
   .generated-articles .article-caption {
     background: rgba(0, 0, 0, 0.5);
+    font-weight: 300;
     line-height: 1.3em;
-    font-size: 1.1em;
+    font-size: 1em;
     padding: 0 1em;
-    text-align: justify; }
+    text-align: justify;
+    align-self: flex-end; }
 
 .footer-container {
   display: -webkit-box;
