@@ -5,50 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>INSTANEWS - NYT TOP STORIES</title>
-    <link rel="stylesheet" href=".build/css/reset.css">
-    <link rel="stylesheet" href=".build/css/fonts.css">
-    <link rel="stylesheet" href=".build/css/styles.css">
+
+    <title>NEW INSTANEWS - NYT TOP STORIES</title>
+
+    <link rel="stylesheet" href="build/css/reset.css">
+    <link rel="stylesheet" href="build/css/fonts.css">
+    <link rel="stylesheet" href="build/css/style.min.css">
 </head>
 
 <body>
-    <main class="main-container">
 
-        <!-- Header Section -->
-        <header class="header-container">
-            <div class="logo-container">
-                <img src="assets/images/nyt-logo.svg">
-            </div>
-        </header>
+    <div class="site-wrapper">
+        <main class="main-container">
+            <!-- Header Section -->
+            <header class="header-container">
+                <h1 class="screen-reader-text">New York Times</h1>
+                <div class="logo-container">
+                    <img src="assets/images/nyt-logo.svg" alt="Image of New York Times Logo">
+                </div>
+            </header>
 
-        <!-- Selection Section  -->
-        <div class="section-container">
-            <p class="choose-text">Choose a section:</p>
-            <select id="optionSelector">
-                <option name="sections" value="">Sections...</option>
-                <option name="home" value="home">Home</option>
-                <option name="arts" value="arts">Arts</option>
-                <option name="buisness" value="business">Business</option>
-                <option name="sports" value="sports">Sports</option>
-                <option name="technology" value="technology">Technology</option>
-                <option name="fashion" value="fashion">Fashion</option>
-            </select>
-        </div>
+            <!-- Navigation Section  -->
+            <nav class="navigation-container">
+                <p class="choose-text">Choose a section:</p>
+                <select id="optionSelector">
+                    <option name="sections" value="">Sections...</option>
+                    <option name="home" value="home">Home</option>
+                    <option name="arts" value="arts">Arts</option>
+                    <option name="buisness" value="business">Business</option>
+                    <option name="sports" value="sports">Sports</option>
+                    <option name="technology" value="technology">Technology</option>
+                    <option name="fashion" value="fashion">Fashion</option>
+                </select>
+            </nav>
 
-        <!-- Article Section -->
-        <section class="results">
-        </section>
+            <!-- Articles Section -->
+            <section class="generated-articles">
+            </section>
+        
+        </main>
 
 
-    </main>
+        <!-- Footer Section  -->
+        <footer class="footer-container">
+            <p>© Copyright 2019 INSTANEWS</p>
+        </footer>
 
-    <!-- Footer Section  -->
-    <footer class="footer-container">
-        <p>© Copyright 2019 INSTANEWS</p>
-    </footer>
+    </div>
 
     <script src="./build/js/script.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
 </body>
 
 </html>

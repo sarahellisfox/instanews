@@ -1,0 +1,67 @@
+// Site Colours 
+$white-color: #FFFFFF;
+$gray-color: #c2c2c2; 
+$black-color: #000000; 
+
+// Accessibility 
+.screen-reader-text {
+clip: rect(1px, 1px, 1px, 1px);
+position: absolute !important;
+height: 1px;
+width: 1px;
+overflow: hidden;    
+}
+
+// Page Style 
+
+body {
+background-color: $black-color;
+font-size: 16px;
+color: $white-color; 
+
+.site-wrapper, .navigation-container {
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+}
+}
+
+.main-container {
+min-height: 91vh;
+}
+
+// Header Section
+
+.header-container {
+padding-top: 9.1rem;
+}
+
+// Navigation Section
+
+.choose-text {
+font-size: 0.8rem;
+font-weight: 300; 
+padding-top: 1rem;
+}
+
+#section-selector {
+color: $white-color; 
+}
+
+// Articles Section
+
+.generated-articles img {
+width: 100%;   
+}
+
+// Footer Section
+
+.footer-container {
+display: flex; 
+color: $gray-color; 
+font-size: 14.4px; 
+font-weight: 300; 
+justify-content: center;
+}
