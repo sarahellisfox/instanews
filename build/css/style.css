@@ -73,6 +73,9 @@ body {
     text-align: justify;
     align-self: flex-end; }
 
+.loading-icon {
+  width: 25px; }
+
 .footer-container {
   display: -webkit-box;
   display: flex;
