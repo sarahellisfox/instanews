@@ -16,14 +16,16 @@
 <body>
 
     <div class="site-wrapper">
-        <main class="main-container">
+        <main class="main-container-large">
+            
             <!-- Header Section -->
-            <header class="header-container">
+
+            <!-- Logo  -->
+            <header class="header-container-large">
                 <h1 class="screen-reader-text">New York Times</h1>
                 <div class="logo-container">
-                    <img src="assets/images/nyt-logo.svg" alt="Image of New York Times Logo">
+                    <img src="assets/images/nyt-logo.svg" class="large-logo" alt="Image of New York Times Logo">
                 </div>
-            </header>
 
             <!-- Navigation Section  -->
             <nav class="navigation-container">
@@ -38,13 +40,14 @@
                     <option name="fashion" value="fashion">Fashion</option>
                 </select>
             </nav>
+        </header>
 
             <!-- Articles Section -->
 
+            <div class="loading-icon-wrapper">
+                <img src="assets/images/ajax-loader.gif" id="loading-icon" class="loading-icon" alt="loading icon" hidden>
+            </div>
             <section class="generated-articles-container">
-                <div class="loading-icon-wrapper">
-                    <img src="assets/images/ajax-loader.gif" id="loading-icon" class="loading-icon" alt="loading icon" hidden>
-                </div>
             </section>
 
         </main>

@@ -1,11 +1,3 @@
-li {
-  -webkit-box-flex: 0;
-          flex: 0 1 100%; }
-  @media (min-width: 1000px) {
-    li {
-      -webkit-box-flex: 0;
-              flex: 0 1 50%; } }
-
 html {
   box-sizing: border-box; }
 
@@ -28,7 +20,7 @@ body {
   font-size: 16px;
   color: #FFFFFF;
   margin: 0; }
-  body .site-wrapper, body .navigation-container {
+  body .site-wrapper, body .main-container-large, body .main-container-small, body .navigation-container {
     width: 100%;
     display: -webkit-box;
     display: flex;
@@ -38,17 +30,32 @@ body {
             flex-direction: column;
     align-content: center;
     text-align: center; }
+  body a, body a:visited, body a:hover, body a:active {
+    color: inherit;
+    text-decoration: none; }
 
-.main-container {
-  min-height: 91vh; }
+.main-container-large {
+  min-height: 89vh; }
 
-.header-container {
+.main-container-small {
+  min-height: 10vh; }
+
+.header-container-large {
+  width: 100%;
   padding-top: 9.1rem; }
+  .header-container-large .large-logo {
+    size: 100%; }
+
+.header-container-small {
+  padding: 2rem 0 3.5rem 0; }
+  .header-container-small .small-logo {
+    width: 150px;
+    height: 150px;
+    align-self: flex-start; }
 
 .choose-text {
   font-size: 0.8rem;
-  font-weight: 300;
-  padding-top: 1rem; }
+  font-weight: 300; }
 
 #section-selector {
   color: #FFFFFF; }
@@ -59,7 +66,7 @@ body {
 .generated-articles {
   display: -webkit-box;
   display: flex;
-  height: 425px;
+  height: 420px;
   width: 100%;
   background-position: center center;
   background-size: cover;
@@ -69,7 +76,7 @@ body {
     font-weight: 300;
     line-height: 1.3em;
     font-size: 1em;
-    padding: 1em;
+    padding: 0.5em;
     text-align: justify;
     align-self: flex-end; }
 

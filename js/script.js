@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     $('#optionSelector').on('change', function () {
         $('#loading-icon').show();
-    
+
         const selection = $('#optionSelector option:selected').val();
 
         $.ajax({
@@ -16,12 +16,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 $('.generated-articles-container').append('<p>Sorry, nothing found! Please try again.</p>');
             } else {
                 filteredResults.slice(0, 12).forEach(function (item) {
-                    $('.generated-articles-container').append('<article class="generated-articles" style="background-image: url(' + item.multimedia[4].url + ');">' + '<p class="article-caption">' + item.abstract + '</p></article>');
+                    $('.generated-articles-container').append('<a href="' + item.url + '">' + '<article class="generated-articles" style="background-image: url(' + item.multimedia[4].url + ');">' + '<p class="article-caption">' + item.abstract + '</p></article></a>');
+                    $("img").removeClass("large-logo").addClass("small-logo");
+                    $("main").removeClass("main-container-large").addClass("main-container-small");
+                    $("header").removeClass("header-container-large").addClass("header-container-small");
                 });
             }
         }).fail(function () {
+            $('.generated-articles-container').empty();
             $('.generated-articles-container').append('<p>Sorry, nothing found! Please try again.</p>');
-        }).always(function() {
+        }).always(function () {
             $('#loading-icon').hide();
         });
     });

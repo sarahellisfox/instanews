@@ -1,15 +1,36 @@
-//TO DO 
-// Add mixin or tablet media query 
+// //TO DO 
+// // Add mixin or tablet media query 
 
-$desktop-width: 1000px;
-@mixin desktop {
-  @media (min-width: $desktop-width) {
-    @content;
-  }
-}
-li {
-   flex: 0 1 100%;
-   @include desktop {
-      flex: 0 1 50%;
-   }
-}
+// $desktop-width: 1000px;
+// @mixin desktop {
+//   @media (min-width: $desktop-width) {
+//     @content;
+//   }
+// }
+// li {
+//    flex: 0 1 100%;
+//    @include desktop {
+//       flex: 0 1 50%;
+//    }
+// }
+
+
+
+
+
+
+
+
+// $desktop-width: 1000px;
+// @mixin desktop {
+//   @media (min-width: $desktop-width) {
+//     @content;
+//   }
+// }
+// li {
+//    flex: 0 1 100%;
+//    @include desktop {
+//       flex: 0 1 50%;
+//    }
+// }
+
