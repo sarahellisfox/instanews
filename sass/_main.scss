@@ -1,13 +1,13 @@
-// CSS BOX RESET CODE 
+// CSS Box Reset Code
 html {
     box-sizing: border-box;
   }
-  *, *:before, *:after {
+
+*, *:before, *:after {
     box-sizing: inherit;
-  } 
+} 
 
 // Smooth Scrolling 
-
 html {
     scroll-behavior: smooth; 
 }
@@ -16,7 +16,6 @@ html {
 $white-color: #FFFFFF;
 $gray-color: #c2c2c2; 
 $black-color: #000000; 
-$inherit: inherit; 
 
 // Accessibility 
 .screen-reader-text {
@@ -28,13 +27,13 @@ overflow: hidden;
 }
 
 // Page Style 
-
 body {
     background-color: $black-color;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     color: $white-color; 
     margin: 0;
+}
 
 .site-wrapper, .navigation-container {
     width: 100%; 
@@ -45,24 +44,9 @@ body {
     text-align: center;
 }
 
-a {
-    color: $inherit;
-    text-decoration: none;
-    &:visited {
-    @extend a; 
-    }
-    &:hover {
-    @extend a;  
-    }
-    &:active {
-    @extend a; 
-    }
-  }
-}
-
 .main-container-large {
     @extend .site-wrapper; 
-    min-height: 89vh;
+    min-height: 90vh;
 }
 
 .main-container-small {
@@ -74,57 +58,146 @@ a {
 
 .header-container-large {
     width: 100%; 
-    padding-top: 9.1rem;
+    padding-top: 6rem;
+
+    @include tablet {
+        width: 50%; 
+        display: inline-flex;
+        align-items: center;
+        padding-top: 20em;
+    }
+
+    @include desktop {
+        width: 100%; 
+        padding-top: 15em;
+        
+    }
 
     .large-logo {
         size: 100%; 
+
+        @include desktop {
+        padding-right: 5em;
+        }
+
     }
 }
 
 .header-container-small {
     padding: 2rem 0 3.5rem 0;
+    max-width: 600px; 
+
+        @include tablet {
+            display: inline-flex;
+        }
+
+        @include desktop {
+            display: inline-flex;
+}
 
     .small-logo {
         width: 150px; 
         height: 150px; 
         align-self: flex-start;
+
+            @include tablet {
+                width: 65px;
+                height: 65px;
+                margin-left: 3em; 
+            }
+
+            @include desktop {
+                width: 65px;
+                height: 65px;
+                margin: 1em 2em;
+        }
     }
 }
 
 // Navigation Section
 
+.navigation-container-small {
+
+    @include tablet {
+        width: 50%; 
+    }
+
+    @include desktop {
+        width: 33%; 
+        text-align: left;
+    }
+}
+
 .choose-text {
     font-size: 0.8rem;
     font-weight: 300; 
-}
 
-#section-selector {
-    color: $white-color; 
+    @include desktop {
+        font-size: 1.05em;
+    }
 }
 
 // Articles Section
+.optionSelector {
+    border: 1px solid #AAA;
+    border-radius: 2px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    color: $black-color;
+    padding-top: 2px;
+    padding-bottom: 2px;
 
-.generated-articles-container {
-display: block;     
+    @include desktop {
+    justify-self: center;
+    font-size: 1em;
+    }
 }
 
-.generated-articles {
-    display: flex; 
+.generated-articles-container {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+   
+    .generated-articles {
+    @extend .generated-articles-container; 
     height: 420px;
     width: 100%; 
-    background-position: center center; 
+    background-position: 50%; 
     background-size: cover;
     background-repeat: no-repeat;
     
-    .article-caption {
-        background: rgba(0, 0, 0, 0.5);
-        font-weight: 300;
-        line-height: 1.3em;
-        font-size: 1em;
-        padding: 0.5em;
-        text-align: justify;      
-        align-self: flex-end;
+        .article-caption {
+            background: rgba(0, 0, 0, 0.5);
+            font-weight: 300;
+            line-height: 1.3em;
+            font-size: 1em;
+            padding: 0.5em;
+            text-align: justify;      
+            align-self: flex-end;
+        }
+    }   
+}
+
+a {
+    color: inherit;
+    text-decoration: none; 
+    
+    &:visited {
+    @extend a; 
     }
+    &:hover {
+    @extend a;  
+    }
+    &:active {
+    @extend a; 
+    }
+
+    @include tablet {
+        max-width: 50%; 
+  }
+
+  @include desktop {
+      max-width: 25%; 
+  }
 }
 
 // Loading Icon 
@@ -141,4 +214,8 @@ color: $gray-color;
 font-size: 14.4px; 
 font-weight: 300; 
 justify-content: center;
+
+    @include desktop {
+        justify-content:  left;
+    }
 }

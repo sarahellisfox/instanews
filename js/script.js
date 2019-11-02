@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     $("img").removeClass("large-logo").addClass("small-logo");
                     $("main").removeClass("main-container-large").addClass("main-container-small");
                     $("header").removeClass("header-container-large").addClass("header-container-small");
+                    $("nav").removeClass("navigation-container-large").addClass("navigation-container-small");
                 });
             }
         }).fail(function () {
