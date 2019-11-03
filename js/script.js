@@ -24,9 +24,9 @@ document.addEventListener('DOMContentLoaded', function () {
             //Empties the article container so repeat selects don't spawn more than 12 articles 
             $('.generated-articles-container').empty();
 
-            //Filters results for whether or not articles contain an image 
+            //Filters results for whether or not articles contain an image and an abstract (I had a problem with the missing abstract case come up in testing, so I put it in!)
             const filteredResults = data.results.filter(function (result) {
-                return result.multimedia[4] !== undefined;
+                return (result.multimedia[4] !== undefined && result.abstract !== "");    
             });
 
             //If the API is working but returns no suitable articles, this error message is displayed  
