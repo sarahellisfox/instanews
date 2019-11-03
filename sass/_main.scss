@@ -13,23 +13,27 @@ html {
 }
 
 // Site Colours 
-$white-color: #FFFFFF;
-$gray-color: #c2c2c2; 
-$black-color: #000000; 
+    $white-color: #FFFFFF;
+    $gray-color: #c2c2c2; 
+    $black-color: #000000; 
 
-// Accessibility 
+// Site Font 
+    $font: 'Open Sans', sans-serif;
+
+// Accessibility - Screen Readers
+
 .screen-reader-text {
-clip: rect(1px, 1px, 1px, 1px);
-position: absolute !important;
-height: 1px;
-width: 1px;
-overflow: hidden;    
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;    
 }
 
 // Page Style 
 body {
     background-color: $black-color;
-    font-family: 'Open Sans', sans-serif;
+    font-family: $font;
     font-size: 16px;
     color: $white-color; 
     margin: 0;
@@ -58,7 +62,7 @@ body {
 
 .header-container-large {
     width: 100%; 
-    padding-top: 6rem;
+    padding-top: 11em;
 
     @include tablet {
         width: 50%; 
@@ -75,11 +79,6 @@ body {
 
     .large-logo {
         size: 100%; 
-
-        @include desktop {
-        padding-right: 5em;
-        }
-
     }
 }
 
@@ -129,8 +128,10 @@ body {
 }
 
 .choose-text {
+    font-family: $font;
     font-size: 0.8rem;
     font-weight: 300; 
+    padding: 1em 0;
 
     @include desktop {
         font-size: 1.05em;
@@ -166,12 +167,13 @@ body {
     background-repeat: no-repeat;
     
         .article-caption {
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.6);
             font-weight: 300;
-            line-height: 1.3em;
+            line-height: 1.4em;
+            font-family: $font;
             font-size: 1em;
             padding: 0.5em;
-            text-align: justify;      
+            text-align: left;
             align-self: flex-end;
         }
     }   
@@ -209,13 +211,15 @@ a {
 // Footer Section
 
 .footer-container {
-display: flex; 
-color: $gray-color; 
-font-size: 14.4px; 
-font-weight: 300; 
-justify-content: center;
+    display: flex; 
+    color: $gray-color; 
+    font-size: 14.4px; 
+    font-weight: 300; 
+    justify-content: center;
+    padding: 3em 0;
 
-    @include desktop {
-        justify-content:  left;
-    }
+        @include desktop {
+            justify-content:  left;
+            padding-left: 2em;
+        }
 }
