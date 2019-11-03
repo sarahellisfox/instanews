@@ -9,7 +9,7 @@ The Instanews App is the second project that I completed for the Red Academy Web
 For this project I utilized Gulp to compile SASS and to minify my Javascript and stylesheets. 
 
 ### Gulp & Key Gulp Dependencies 
-* [gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer) : A CSS post processor that combs through compiled CSS files and adds vendor prefixes like -webkit and -moz after checking the code against [caniuse.com] (https://caniuse.com/).
+* [gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer) : A CSS post processor that combs through compiled CSS files and adds vendor prefixes like -webkit and -moz after checking the code against [caniuse.com](https://caniuse.com/).
 
 * [gulp-cssnano](https://www.npmjs.com/package/gulp-cssnano) : Runs CSS through focused optimisations to make the file as small as possible. 
 
