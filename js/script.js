@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+$( document ).ready(function() {
     const optionSelector = document.getElementById('optionSelector');
 
     // Calls the Selectric plugin to change the style of the dropdown selector 
