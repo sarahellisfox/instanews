@@ -1,10 +1,4 @@
 html {
-  box-sizing: border-box; }
-
-*, *:before, *:after {
-  box-sizing: inherit; }
-
-html {
   scroll-behavior: smooth; }
 
 .screen-reader-text {
@@ -106,7 +100,9 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
   color: #000000;
   padding-top: 2px;
-  padding-bottom: 2px; }
+  padding-bottom: 2px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
   @media (min-width: 1000px) {
     .optionSelector {
       justify-self: center;
@@ -191,6 +187,12 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
 
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
 body {
   line-height: 1; }
 
@@ -209,6 +211,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+* {
+  font-family: "Open Sans", sans-serif; }
+
 .selectric-wrapper {
   position: relative;
   cursor: pointer; }
@@ -217,7 +222,6 @@ table {
   width: 100%; }
 
 .selectric {
-  font-family: "Open Sans", sans-serif;
   border: 1px solid #c2c2c2;
   border-radius: 1px;
   background: #FFFFFF;
@@ -232,7 +236,6 @@ table {
   margin: 3px;
   text-align: left;
   padding-left: 5px;
-  font-family: "Open Sans", sans-serif;
   font-size: 0.75em;
   line-height: 20px;
   color: #000000;
