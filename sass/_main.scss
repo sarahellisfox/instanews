@@ -3,14 +3,6 @@ html {
     scroll-behavior: smooth; 
 }
 
-// Site Colours 
-    $white-color: #FFFFFF;
-    $gray-color: #c2c2c2; 
-    $black-color: #000000; 
-
-// Site Font 
-    $font: 'Open Sans', sans-serif;
-
 // Accessibility - Screen Readers
 .screen-reader-text {
     clip: rect(1px, 1px, 1px, 1px);
@@ -26,6 +18,7 @@ body {
     background-color: $black-color;
     font-family: $font;
     font-size: 16px;
+    font-weight: 300;
     color: $white-color; 
     margin: 0;
 }
@@ -64,8 +57,7 @@ body {
 
     @include desktop {
         width: 100%; 
-        padding-top: 15em;
-        
+        padding-top: 15em;    
     }
 
     .large-logo {
