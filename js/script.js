@@ -44,7 +44,7 @@ $( document ).ready(function() {
 
                 console.log('results');
                 // Changes header, nav and logo from large to small when results are returned 
-                $("img").removeClass("large-logo").addClass("small-logo");
+                $("img").removeClass("large-logo").addClass("small-logo").wrap('<a href="https://sarahellisfox.github.io/instanews/"></a>');
                 $("main").removeClass("main-container-large").addClass("main-container-small");
                 $("header").removeClass("header-container-large").addClass("header-container-small");
                 $("nav").removeClass("navigation-container-large").addClass("navigation-container-small");
